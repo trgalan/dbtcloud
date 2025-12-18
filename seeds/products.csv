@@ -1,0 +1,4 @@
+product_id,sku,name,category,price,created_ts
+2001,SKU-111,Small Widget,Widgets,9.99,2023-11-10 12:00:00
+2002,SKU-222,Large Widget,Widgets,19.99,2023-12-01 10:30:00
+2003,SKU-333,Blue Gadget,Gadgets,29.99,2024-01-20 09:15:00

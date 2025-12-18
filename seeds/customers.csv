@@ -1,0 +1,5 @@
+customer_id,first_name,last_name,email,signup_ts,country
+1001,Anna,Smith,anna.smith@example.com,2024-01-10 08:12:00,US
+1002,Ben,Lee,ben.lee@example.com,2024-02-05 14:20:30,US
+1003,Clara,Ng,clara.ng@example.com,2024-03-01 09:00:00,GB
+1004,Diego,Martinez,diego222@invalid,2024-04-15 20:55:10,ES

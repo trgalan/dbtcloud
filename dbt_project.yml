@@ -1,0 +1,37 @@
+name: 'delta_demo'
+version: '1.1'
+config-version: 2
+
+profile: 'databricks_demo'
+
+source-paths: ["models"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  delta_demo:
+    +materialized: view
+    bronze:
+      +materialized: table
+      +schema: bronze_layer
+    silver:
+      +materialized: table
+      +schema: silver_layer
+    gold:
+      # +materialized: table
+      +schema: gold_layer
+
+seeds:
+  +schema: raw_data
+
+on-run-start:
+  - "CREATE DATABASE IF NOT EXISTS dbtcloud_raw_data"
+  - "CREATE DATABASE IF NOT EXISTS dbtcloud_bronze_layer"
+  - "CREATE DATABASE IF NOT EXISTS dbtcloud_silver_layer"
+  - "CREATE DATABASE IF NOT EXISTS dbtcloud_gold_layer"

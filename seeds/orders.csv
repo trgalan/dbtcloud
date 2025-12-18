@@ -1,0 +1,4 @@
+order_id,customer_id,order_ts,status,total_amount
+50001,1001,2024-05-01 10:00:00,completed,39.97
+50002,1002,2024-05-03 12:05:00,completed,19.99
+50003,1003,2024-05-04 18:20:00,cancelled,0.00
