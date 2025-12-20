@@ -1,5 +1,5 @@
 {{ config(materialized='table', file_format='delta') }}
-with raw as ( select * from {{ ref('products') }} )
+with raw as ( select * from {{ source('landing', 'products') }} )
 select
   cast(product_id as int) as product_id,
   sku, name, category,

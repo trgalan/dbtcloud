@@ -1,0 +1,17 @@
+sources:
+  - name: landing
+    database: dbtcloud 
+    schema: landing  
+    tables:
+      - name: customers
+        # freshness:
+        #   warn_after:
+        #     count: 365
+        #     period: day
+        #   error_after:
+        #     count: 1460
+        #     period: day
+        # loaded_at_field: created_at
+      - name: order_items
+      - name: orders
+      - name: products

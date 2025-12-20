@@ -1,5 +1,5 @@
 {{ config(materialized='incremental', unique_key='order_id', file_format='delta') }}
-with raw as ( select * from {{ ref('orders') }} )
+with raw as ( select * from {{source('landing', 'orders') }} )
 select
   cast(order_id as int) as order_id,
   cast(customer_id as int) as customer_id,

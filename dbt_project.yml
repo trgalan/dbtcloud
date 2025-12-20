@@ -4,7 +4,8 @@ config-version: 2
 
 profile: 'databricks_demo'
 
-source-paths: ["models"]
+# source-paths: ["models"]
+model-paths: ["models"]
 macro-paths: ["macros"]
 seed-paths: ["seeds"]
 snapshot-paths: ["snapshots"]
@@ -30,8 +31,8 @@ models:
 seeds:
   +schema: raw_data
 
-on-run-start:
-  - "CREATE DATABASE IF NOT EXISTS dbtcloud_raw_data"
-  - "CREATE DATABASE IF NOT EXISTS dbtcloud_bronze_layer"
-  - "CREATE DATABASE IF NOT EXISTS dbtcloud_silver_layer"
-  - "CREATE DATABASE IF NOT EXISTS dbtcloud_gold_layer"
+# on-run-start:
+#   - "CREATE DATABASE IF NOT EXISTS dbtcloud_raw_data"
+#   - "CREATE DATABASE IF NOT EXISTS dbtcloud_bronze_layer"
+#   - "CREATE DATABASE IF NOT EXISTS dbtcloud_silver_layer"
+#   - "CREATE DATABASE IF NOT EXISTS dbtcloud_gold_layer"
