@@ -7,3 +7,5 @@ select
   to_timestamp(created_ts) as created_ts,
   current_timestamp() as ingestion_ts
 from raw;
+
+
