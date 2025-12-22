@@ -13,3 +13,4 @@ from raw
 {% if is_incremental() %}
 where signup_ts >= (select max(signup_ts) from {{ this }})
 {% endif %};
+
