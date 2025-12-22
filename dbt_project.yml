@@ -4,7 +4,8 @@ config-version: 2
 
 profile: 'databricks_demo'
 
-source-paths: ["models"]
+# source-paths: ["models"]
+model-paths: ["models"]
 macro-paths: ["macros"]
 seed-paths: ["seeds"]
 snapshot-paths: ["snapshots"]
